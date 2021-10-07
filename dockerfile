@@ -11,5 +11,5 @@ RUN unzip uloax.zip && rm -f uloax.zip
 RUN cd uloax
 COPY * /usr/local/apache2/htdocs/
 #CMD ["sh", "systemctl start httpd"]
-ENTRYPOINT ["tail"]
-CMD ["-f","/dev/null"]
+#ENTRYPOINT ["tail"]
+#CMD ["-f","/dev/null"]

@@ -8,4 +8,4 @@ RUN cd /tmp
 RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page271/uloax.zip
 RUN unzip uloax.zip && rm -f uloax.zip
 RUN cd uloax
-RUN mv * /var/www/html/
+RUN mv * /usr/local/apache2/htdocs/

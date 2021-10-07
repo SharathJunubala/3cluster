@@ -1,5 +1,7 @@
 FROM httpd
-ENTRYPOINT [ "/usr/sbin/apache2", "-k", "start" ]
+ENTRYPOINT [ "/usr/sbin/httpd", "-k", "start" ]
 RUN cd /tmp
 RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page271/uloax.zip
-ADD uloax.zip /usr/local/apache2/htdocs/
+ADD uloax.zip .
+RUN cd uloax
+RUN mv * /var/www/html/

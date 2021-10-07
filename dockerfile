@@ -1,5 +1,4 @@
 FROM httpd
-RUN systemctl start httpd
+ENTRYPOINT [ "/usr/sbin/apache2", "-k", "start" ]
 RUN cd /tmp
-RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page271/uloax.zip
-
+ADD wget https://www.free-css.com/assets/files/free-css-templates/download/page271/uloax.zip

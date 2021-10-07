@@ -1,5 +1,5 @@
 FROM httpd
-ENTRYPOINT [ "/usr/sbin/httpd", "-k", "start" ]
+ENTRYPOINT [ "/usr/sbin/apache2", "-k", "start" ]
 RUN  apt-get update \
   && apt-get install -y wget \
   && apt-get install unzip -y \

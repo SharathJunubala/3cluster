@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taxi-page
+  namespace: taxi
+spec:
+  selector:
+    matchLabels:
+      app: taxi-svc
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp-taxi
+        image: 104785239205.dkr.ecr.ap-south-1.amazonaws.com/cluster3:22
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80

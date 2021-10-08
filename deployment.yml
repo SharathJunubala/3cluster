@@ -4,7 +4,7 @@ metadata:
   name: taxi-deploy
   namespace: taxi
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
       app: taxi-deploy
@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
       - name: taxi-deploy
+        resources:
         image: 104785239205.dkr.ecr.ap-south-1.amazonaws.com/cluster3:abcd
         ports:
         - containerPort: 8080

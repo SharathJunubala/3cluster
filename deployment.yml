@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: taxi-page
+  name: taxi-deploy
   namespace: taxi
 spec:
+  replicas: 10
   selector:
     matchLabels:
-      app: taxi-svc
+      app: taxi-deploy
   template:
     metadata:
       labels:
-        app: taxi-page
+        app: taxi-deploy
     spec:
       containers:
-      - name: myapp-taxi
+      - name: taxi-deploy
         image: 104785239205.dkr.ecr.ap-south-1.amazonaws.com/cluster3:abcd
         resources:
           limits:

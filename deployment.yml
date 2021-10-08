@@ -10,11 +10,11 @@ spec:
   template:
     metadata:
       labels:
-        app: myapp
+        app: taxi-page
     spec:
       containers:
       - name: myapp-taxi
-        image: 104785239205.dkr.ecr.ap-south-1.amazonaws.com/cluster3:22
+        image: 104785239205.dkr.ecr.ap-south-1.amazonaws.com/cluster3:abcd
         resources:
           limits:
             memory: "128Mi"

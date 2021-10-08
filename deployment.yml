@@ -18,7 +18,7 @@ spec:
         image: 104785239205.dkr.ecr.ap-south-1.amazonaws.com/cluster3:abcd
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory:
+            cpu: 
         ports:
         - containerPort: 8080

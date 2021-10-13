@@ -4,7 +4,7 @@ metadata:
   name: taxi-deploy
   namespace: taxi
 spec:
-  replicas: 10
+  replicas: 5
   selector:
     matchLabels:
       app: taxi-deploy
